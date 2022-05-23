@@ -1,0 +1,13 @@
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.exe
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.deps.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.runtimeconfig.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.runtimeconfig.dev.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.dll
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\bin\Debug\netcoreapp3.1\5. Date Modifier.pdb
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.csprojAssemblyReference.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.AssemblyInfoInputs.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.AssemblyInfo.cs
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.csproj.CoreCompileInputs.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.dll
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.pdb
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\5. Date Modifier\5. Date Modifier\obj\Debug\netcoreapp3.1\5. Date Modifier.genruntimeconfig.cache

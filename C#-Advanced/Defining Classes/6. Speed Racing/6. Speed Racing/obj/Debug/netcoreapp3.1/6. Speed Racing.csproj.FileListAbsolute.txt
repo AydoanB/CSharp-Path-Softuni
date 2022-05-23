@@ -1,0 +1,13 @@
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.exe
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.deps.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.runtimeconfig.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.runtimeconfig.dev.json
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.dll
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\bin\Debug\netcoreapp3.1\6. Speed Racing.pdb
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.csprojAssemblyReference.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.AssemblyInfoInputs.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.AssemblyInfo.cs
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.csproj.CoreCompileInputs.cache
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.dll
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.pdb
+C:\Users\Aiduan\Desktop\Advanced and OOP\Advanced\Defining Classes\6. Speed Racing\6. Speed Racing\obj\Debug\netcoreapp3.1\6. Speed Racing.genruntimeconfig.cache
