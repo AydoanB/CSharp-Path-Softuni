@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. The Fight for Gondor", "1. The Fight for Gondor\1. The Fight for Gondor.csproj", "{265ED91D-86E0-427D-B41F-1B30BD6D40A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265ED91D-86E0-427D-B41F-1B30BD6D40A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265ED91D-86E0-427D-B41F-1B30BD6D40A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265ED91D-86E0-427D-B41F-1B30BD6D40A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265ED91D-86E0-427D-B41F-1B30BD6D40A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62308780-C21C-4113-8255-EAF8A3BF9FD7}
+	EndGlobalSection
+EndGlobal

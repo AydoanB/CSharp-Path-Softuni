@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3. Periodic Table", "Problem 3. Periodic Table\Problem 3. Periodic Table.csproj", "{3621D0BB-CBFE-4C6A-B9AF-65FBEA197FEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3621D0BB-CBFE-4C6A-B9AF-65FBEA197FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3621D0BB-CBFE-4C6A-B9AF-65FBEA197FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3621D0BB-CBFE-4C6A-B9AF-65FBEA197FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3621D0BB-CBFE-4C6A-B9AF-65FBEA197FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0B64026-9E7D-427A-BA4B-683F7DD285B3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Matrix Shuffling", "4. Matrix Shuffling\4. Matrix Shuffling.csproj", "{2B28001F-31A2-4F86-AED8-C1ED289C988B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B28001F-31A2-4F86-AED8-C1ED289C988B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B28001F-31A2-4F86-AED8-C1ED289C988B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B28001F-31A2-4F86-AED8-C1ED289C988B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B28001F-31A2-4F86-AED8-C1ED289C988B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E5A3B82-D59E-43B0-AE0C-95B239057336}
+	EndGlobalSection
+EndGlobal
