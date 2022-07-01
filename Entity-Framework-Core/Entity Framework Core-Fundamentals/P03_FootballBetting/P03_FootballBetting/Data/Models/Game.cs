@@ -26,6 +26,5 @@ namespace P03_FootballBetting.Data.Models
 
         public string Result{ get; set; }
 
-        public ICollection<Game>HomeGames
     }
 }

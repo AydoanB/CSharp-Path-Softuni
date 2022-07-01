@@ -35,8 +35,8 @@ namespace P03_FootballBetting.Data
                 .WithMany(c => c.Towns)
                 .HasForeignKey(t => t.CountryId));
 
-            modelBuilder.Entity<Game>(g=>g.HasOne(ht=>ht.HomeTeam)
-                .WithMany(t=>t.))
+            modelBuilder.Entity<Game>(g => g.HasOne(ht => ht.HomeTeam));
+               
             
             //For PlayerStatistics
             modelBuilder.Entity<PlayerStatistics>(e => e.HasKey(k => new { k.GameId, k.PlayerId }));
