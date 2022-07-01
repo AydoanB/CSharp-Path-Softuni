@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
 
@@ -24,5 +25,7 @@ namespace P03_FootballBetting.Data.Models
         public double DrawBetRate { get; set; }
 
         public string Result{ get; set; }
+
+        public ICollection<Game>HomeGames
     }
 }
