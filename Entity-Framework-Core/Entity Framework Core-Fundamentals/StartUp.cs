@@ -1,12 +1,10 @@
-﻿using System;
+﻿using SoftUni.Data;
+using SoftUni.Models;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualBasic;
-using SoftUni.Data;
-using SoftUni.Data;
-using SoftUni.Models;
 
 namespace SoftUni
 {
@@ -15,9 +13,10 @@ namespace SoftUni
         static void Main(string[] args)
         {
             var connection = new SoftUniContext();
-            var employees = GetLatestProjects(connection);
-            Console.WriteLine(employees);
+            GetEmployeesFullInformation(connection);
+
         }
+
 
 
         //Problem 3
@@ -33,15 +32,15 @@ namespace SoftUni
                 x.MiddleName,
                 x.JobTitle,
                 x.Salary
-            }).OrderBy(x => x.id);
+            }).OrderBy(x => x.id).ToList();
 
-            foreach (var employee in employees)
-            {
-                sb.AppendLine(
-                    $"{employee.FirstName} {employee.LastName} {employee.MiddleName} {employee.JobTitle} {Math.Round(employee.Salary, 2)}");
-            }
-
-            return sb.ToString().TrimEnd();
+            //foreach (var employee in employees)
+            //{
+            //    sb.AppendLine(
+            //        $"{employee.FirstName} {employee.LastName} {employee.MiddleName} {employee.JobTitle} {Math.Round(employee.Salary, 2)}");
+            //}
+            employees.ForEach(employee => sb.AppendLine($"{employee.FirstName} {employee.LastName} {employee.MiddleName} {employee.JobTitle} {Math.Round(employee.Salary, 2)}"));
+            return sb.ToString().Trim();
         }
 
 
@@ -163,7 +162,7 @@ namespace SoftUni
             var result = context.Addresses
                 .Select(a => new
                 {
-                    AddressText = a.AddressText,
+                    a.AddressText,
                     TownName = a.Town.Name,
                     EmployeeCount = a.Employees.Count()
                 })
@@ -252,7 +251,7 @@ namespace SoftUni
         {
             var sb = new StringBuilder();
             var result = context.Projects
-                .OrderByDescending(p=>p.StartDate)
+                .OrderByDescending(p => p.StartDate)
                 .Take(10)
                 .Select(p => new
                 {
@@ -271,7 +270,7 @@ namespace SoftUni
                 sb.AppendLine($"{projects.Name}\n" +
                               $"{projects.Description}\n" +
                               $"{projects.StartDate}");
-               
+
             }
 
             return sb.ToString().Trim();
@@ -368,36 +367,36 @@ namespace SoftUni
         }
 
         // Problem 15
-        public static string RemoveTown(SoftUniContext context)
-        {
-            Town townToDelete = context.Towns
-                .First(t => t.Name == "Seattle");
+        //public static string RemoveTown(SoftUniContext context)
+        //{
+        //Town townToDelete = context.Towns
+        //.First(t => t.Name == "Seattle");
 
 
-            IQueryable<Address> addressesToDelete = context.Addresses
-                .Where(a => a.TownId == townToDelete.TownId);
+        //IQueryable<Address> addressesToDelete = context.Addresses
+        //.Where(a => a.TownId == townToDelete.TownId);
 
-            int addressesCount = addressesToDelete.Count();
+        //int addressesCount = addressesToDelete.Count();
 
-            IQueryable<Employee> employeesOnDeletedAddress = context.Employees
-                .Where(e => addressesToDelete.Any(a => a.AddressId == e.AddressId));
+        //IQueryable<Employee> employeesOnDeletedAddress = context.Employees
+        //.Where(e => addressesToDelete.Any(a => a.AddressId == e.AddressId));
 
-            foreach (Employee e in employeesOnDeletedAddress)
-            {
-                e.AddressId = null;
-            }
+        //foreach (Employee e in employeesOnDeletedAddress)
+        //{
+        //e.AddressId = null;
+        //}
 
-            foreach (var a in addressesToDelete)
-            {
-                context.Addresses.Remove(a);
-            }
+        //foreach (var a in addressesToDelete)
+        //{
+        //context.Addresses.Remove(a);
+        //}
 
-            context.Towns.Remove(townToDelete);
+        //context.Towns.Remove(townToDelete);
 
-            context.SaveChanges();
+        //context.SaveChanges();
 
-            return $"{addressesCount} addresses in {townToDelete.Name} were deleted";
-        }
+        //return $"{addressesCount} addresses in {townToDelete.Name} were deleted";
+        //}
     }
 }
 
