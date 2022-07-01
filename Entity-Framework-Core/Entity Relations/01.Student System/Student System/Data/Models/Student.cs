@@ -2,28 +2,30 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace P01_StudentSystem.Data.Models
 {
-    internal class Student
+    public class Student
     {
+        public Student()
+        {
+            CourseEnrollments = new HashSet<Course>();
+            HomeworkSubmissions = new HashSet<Homework>();
+        }
         [Key]
-        [Required]
         public int StudentId { get; set; }
-        
-        [MaxLength(50)]
-        [Required]
 
+        [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
 
-        [StringLength(10)]
-        public string PhoneNumber{ get; set; }
+        [Column(TypeName = "char(10)")]
+        public string PhoneNumber { get; set; }
 
-        [Required]
         public DateTime RegisteredOn { get; set; }
 
-        public DateTime Birthday{ get; set; }
+        public DateTime? Birthday { get; set; }
 
         ICollection<Course> CourseEnrollments { get; set; }
         ICollection<Homework> HomeworkSubmissions { get; set; }

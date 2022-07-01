@@ -1,13 +1,23 @@
 ﻿using P01_StudentSystem.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Student_System.Models
 {
-    internal class Course
+    public class Course
     {
+        public Course()
+        {
+            StudentsEnrolled = new HashSet<Student>();
+            Resources = new HashSet<Resource>();
+            HomeworkSubmissions = new HashSet<Homework>();
+        }
+        [Key]
         public int CourseId { get; set; }
+        [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
