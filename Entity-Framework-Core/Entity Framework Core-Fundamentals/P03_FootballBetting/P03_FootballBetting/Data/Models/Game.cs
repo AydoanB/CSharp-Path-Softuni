@@ -23,8 +23,12 @@ namespace P03_FootballBetting.Data.Models
         public double HomeTeamBetRate { get; set; }
         public double AwayTeamBetRate { get; set; }
         public double DrawBetRate { get; set; }
+        
 
         public string Result{ get; set; }
+
+        public ICollection<Bet> Bets = new HashSet<Bet>();
+        public ICollection<PlayerStatistic> Statistics = new HashSet<PlayerStatistic>();
 
     }
 }

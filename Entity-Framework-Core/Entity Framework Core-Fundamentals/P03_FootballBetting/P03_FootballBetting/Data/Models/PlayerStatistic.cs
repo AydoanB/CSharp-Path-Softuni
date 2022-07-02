@@ -1,6 +1,6 @@
 ﻿namespace P03_FootballBetting.Data.Models
 {
-    public class PlayerStatistics
+    public class PlayerStatistic
     {
         public int GameId { get; set; }
         public Game Game { get; set; }
