@@ -15,6 +15,6 @@ namespace P03_FootballBetting.Data.Models
         
         public string Name { get; set; }
 
-        public ICollection<Town> Towns;
+        public virtual ICollection<Town> Towns { get; set; }
     }
 }

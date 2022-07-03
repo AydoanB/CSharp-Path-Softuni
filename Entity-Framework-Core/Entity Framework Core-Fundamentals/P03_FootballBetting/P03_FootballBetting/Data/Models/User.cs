@@ -6,6 +6,10 @@ namespace P03_FootballBetting.Data.Models
 {
     public class User
     {
+        public User()
+        {
+            Bets = new HashSet<Bet>();
+        }
         [Key]
         public int UserId { get; set; }
 
@@ -19,6 +23,6 @@ namespace P03_FootballBetting.Data.Models
 
         public decimal Balance { get; set; }
 
-        public ICollection<Bet> Bets = new HashSet<Bet>();
+        public virtual ICollection<Bet> Bets { get; set; }
     }
 }

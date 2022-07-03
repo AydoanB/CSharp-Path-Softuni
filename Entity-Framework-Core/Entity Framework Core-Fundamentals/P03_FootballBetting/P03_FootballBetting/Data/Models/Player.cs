@@ -6,11 +6,15 @@ namespace P03_FootballBetting.Data.Models
 {
     public class Player
     {
-        [Key]
-        public int PlayerId { get; set; }
+        public Player()
+        {
+            Statistics = new HashSet<PlayerStatistic>();
+        }
+
+        [Key] public int PlayerId { get; set; }
 
         public string Name { get; set; }
-        
+
         public int SquadNumber { get; set; }
 
         public int TeamId { get; set; }
@@ -18,9 +22,9 @@ namespace P03_FootballBetting.Data.Models
 
         public int PositionId { get; set; }
         public Position Position { get; set; }
-       
+
         public bool IsInjured { get; set; }
 
-        public ICollection<PlayerStatistic> Statistics = new HashSet<PlayerStatistic>();
+        public virtual ICollection<PlayerStatistic> Statistics { get; set; }
     }
 }
