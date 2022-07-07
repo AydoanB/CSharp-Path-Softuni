@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace BookShop
 {
@@ -16,7 +17,7 @@ namespace BookShop
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            Console.WriteLine(GetAuthorNamesEndingIn(db, "dy"));
+            Console.WriteLine(RemoveBooks(db));
         }
 
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
@@ -152,5 +153,62 @@ namespace BookShop
             return sb.ToString().TrimEnd();
 
         }
-}
+
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .ToList()
+                .Where(b => b.Title.ToLower().Contains(input.ToLower()))
+                .Select(x => x.Title)
+                .OrderBy(x => x)
+                .ToList();
+
+            var sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine(book);
+            }
+
+            return sb.ToString().TrimEnd();
+
+        }
+
+        public static string GetBooksByAuthor(BookShopContext context, string input)
+        {
+            var bookByAuthor = context.Books
+                .ToList()
+                .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                .Select(b => new
+                {
+                    b.BookId,
+                    b.Title,
+                    AuthorFullName = $"{b.Author.FirstName} {b.Author.LastName}"
+                })
+                .OrderBy(x => x.BookId)
+                .ToList();
+
+            var sb = new StringBuilder();
+
+            foreach (var book in bookByAuthor)
+            {
+                sb.AppendLine($"{book.Title} ({book.AuthorFullName})");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var booksToRemove = context.Books
+                .ToList()
+                .Where(x => x.Copies < 4200)
+                .ToList();
+            
+            context.Books.RemoveRange(booksToRemove);
+
+            context.SaveChanges();
+            return booksToRemove.Count;
+        }
+    }
 }
