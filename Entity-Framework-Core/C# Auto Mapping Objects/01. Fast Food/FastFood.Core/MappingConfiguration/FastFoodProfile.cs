@@ -21,8 +21,8 @@ namespace FastFood.Core.MappingConfiguration
             this.CreateMap<CreateCategoryInputModel, Category>()
                 .ForMember(x => x.Name, m => m.MapFrom(s => s.CategoryName));
 
-            this.CreateMap<Category, CreateCategoryInputModel>()
-                .ForMember(x => x.CategoryName, m => m.MapFrom(s => s.Name));
+            this.CreateMap<Category, CategoryAllViewModel>()
+                .ForMember(x => x.Name, m => m.MapFrom(s => s.Name));
         }
     }
 }
