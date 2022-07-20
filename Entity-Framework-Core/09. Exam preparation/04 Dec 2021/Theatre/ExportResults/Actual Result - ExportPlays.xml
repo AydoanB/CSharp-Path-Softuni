@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Plays>
+  <Play Title="A Raisin in the Sun" Duration="01:00:40" Rating="5.4" Genre="Drama">
+    <Actors>
+      <Actor FullName="Wes Thoumasson" MainCharacter="Plays main character in 'A Raisin in the Sun'." />
+      <Actor FullName="Keir Copnall" MainCharacter="Plays main character in 'A Raisin in the Sun'." />
+    </Actors>
+  </Play>
+  <Play Title="Awake and Sing" Duration="02:00:41" Rating="3.8" Genre="Drama">
+    <Actors>
+      <Actor FullName="Vally Baunton" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Freddy Tuckett" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Elsworth Francioli" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Corina Wilce" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Cheri Lashley" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Carlyle Rack" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Bobbe Service" MainCharacter="Plays main character in 'Awake and Sing'." />
+      <Actor FullName="Averil Habbert" MainCharacter="Plays main character in 'Awake and Sing'." />
+    </Actors>
+  </Play>
+  <Play Title="Candida" Duration="02:00:21" Rating="6.5" Genre="Romance">
+    <Actors>
+      <Actor FullName="Morganica Irons" MainCharacter="Plays main character in 'Candida'." />
+      <Actor FullName="Gardener Josselsohn" MainCharacter="Plays main character in 'Candida'." />
+    </Actors>
+  </Play>
+  <Play Title="Fences" Duration="03:00:20" Rating="4.7" Genre="Musical">
+    <Actors>
+      <Actor FullName="Maurizia Artus" MainCharacter="Plays main character in 'Fences'." />
+      <Actor FullName="Gustaf Weadick" MainCharacter="Plays main character in 'Fences'." />
+      <Actor FullName="Ainslie Scollan" MainCharacter="Plays main character in 'Fences'." />
+    </Actors>
+  </Play>
+  <Play Title="Hamlet" Duration="02:00:11" Rating="4.1" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Theodosia Carlton" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Sigrid Rhoddie" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Joelle Pinkstone" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Jayme Bakes" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Emelda Yule" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Carina Donnison" MainCharacter="Plays main character in 'Hamlet'." />
+      <Actor FullName="Briney Hazel" MainCharacter="Plays main character in 'Hamlet'." />
+    </Actors>
+  </Play>
+  <Play Title="Hedda Gabler" Duration="03:00:50" Rating="1" Genre="Musical">
+    <Actors>
+      <Actor FullName="Trever Hulburd" MainCharacter="Plays main character in 'Hedda Gabler'." />
+      <Actor FullName="Hollyanne Domerque" MainCharacter="Plays main character in 'Hedda Gabler'." />
+      <Actor FullName="Greer Croyden" MainCharacter="Plays main character in 'Hedda Gabler'." />
+      <Actor FullName="Gerianna Gianuzzi" MainCharacter="Plays main character in 'Hedda Gabler'." />
+      <Actor FullName="Bryna Alti" MainCharacter="Plays main character in 'Hedda Gabler'." />
+    </Actors>
+  </Play>
+  <Play Title="Life With Father" Duration="04:00:21" Rating="Premier" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Whitaker Emson" MainCharacter="Plays main character in 'Life With Father'." />
+      <Actor FullName="Jude Jeaneau" MainCharacter="Plays main character in 'Life With Father'." />
+      <Actor FullName="Jeane Freen" MainCharacter="Plays main character in 'Life With Father'." />
+      <Actor FullName="Ingram Raybould" MainCharacter="Plays main character in 'Life With Father'." />
+      <Actor FullName="Artemis Stable" MainCharacter="Plays main character in 'Life With Father'." />
+    </Actors>
+  </Play>
+  <Play Title="Look Back in Anger" Duration="01:00:50" Rating="5.3" Genre="Musical">
+    <Actors>
+      <Actor FullName="Mariann Speerman" MainCharacter="Plays main character in 'Look Back in Anger'." />
+      <Actor FullName="Joseito Melmoth" MainCharacter="Plays main character in 'Look Back in Anger'." />
+      <Actor FullName="Anastassia Copcott" MainCharacter="Plays main character in 'Look Back in Anger'." />
+      <Actor FullName="Amy Haskell" MainCharacter="Plays main character in 'Look Back in Anger'." />
+      <Actor FullName="Adoree Boothby" MainCharacter="Plays main character in 'Look Back in Anger'." />
+    </Actors>
+  </Play>
+  <Play Title="Mission Drift" Duration="03:00:21" Rating="7.1" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Sybilla Aspin" MainCharacter="Plays main character in 'Mission Drift'." />
+    </Actors>
+  </Play>
+  <Play Title="Oedipus Rex" Duration="01:00:13" Rating="7.2" Genre="Musical">
+    <Actors>
+      <Actor FullName="Donall Haggett" MainCharacter="Plays main character in 'Oedipus Rex'." />
+      <Actor FullName="Aprilette Clemmett" MainCharacter="Plays main character in 'Oedipus Rex'." />
+      <Actor FullName="Antony Kempe" MainCharacter="Plays main character in 'Oedipus Rex'." />
+    </Actors>
+  </Play>
+  <Play Title="Playboy of the Western World" Duration="03:00:21" Rating="6.1" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Germain Makinson" MainCharacter="Plays main character in 'Playboy of the Western World'." />
+      <Actor FullName="Gabbey Peert" MainCharacter="Plays main character in 'Playboy of the Western World'." />
+      <Actor FullName="Chet Carloni" MainCharacter="Plays main character in 'Playboy of the Western World'." />
+    </Actors>
+  </Play>
+  <Play Title="Stuff Happens" Duration="03:00:10" Rating="6.3" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Venita Dronsfield" MainCharacter="Plays main character in 'Stuff Happens'." />
+      <Actor FullName="Maryjane Rikard" MainCharacter="Plays main character in 'Stuff Happens'." />
+      <Actor FullName="Jacinta Robertshaw" MainCharacter="Plays main character in 'Stuff Happens'." />
+      <Actor FullName="Corny Pegrum" MainCharacter="Plays main character in 'Stuff Happens'." />
+      <Actor FullName="Codie Demaine" MainCharacter="Plays main character in 'Stuff Happens'." />
+    </Actors>
+  </Play>
+  <Play Title="Tartuffe" Duration="02:00:45" Rating="Premier" Genre="Drama">
+    <Actors>
+      <Actor FullName="Filide Wicks" MainCharacter="Plays main character in 'Tartuffe'." />
+      <Actor FullName="Emmott Ditts" MainCharacter="Plays main character in 'Tartuffe'." />
+      <Actor FullName="Alvinia Jachimczak" MainCharacter="Plays main character in 'Tartuffe'." />
+      <Actor FullName="Aindrea Bellwood" MainCharacter="Plays main character in 'Tartuffe'." />
+    </Actors>
+  </Play>
+  <Play Title="The Importance of Being" Duration="04:00:21" Rating="1.3" Genre="Musical">
+    <Actors>
+      <Actor FullName="Waylan Durand" MainCharacter="Plays main character in 'The Importance of Being'." />
+      <Actor FullName="Franciskus Burress" MainCharacter="Plays main character in 'The Importance of Being'." />
+    </Actors>
+  </Play>
+  <Play Title="Three Kingdoms" Duration="02:00:55" Rating="6.1" Genre="Drama">
+    <Actors>
+      <Actor FullName="Troy Lawlee" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Sergei Pendry" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Sarine Tidgewell" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Rubina Woolard" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Melisandra Tranckle" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Isahella Rakestraw" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Gail Avieson" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Esteban Tander" MainCharacter="Plays main character in 'Three Kingdoms'." />
+      <Actor FullName="Athene Blaylock" MainCharacter="Plays main character in 'Three Kingdoms'." />
+    </Actors>
+  </Play>
+  <Play Title="Uncle Vanya" Duration="03:00:10" Rating="Premier" Genre="Drama">
+    <Actors>
+      <Actor FullName="Ted Charley" MainCharacter="Plays main character in 'Uncle Vanya'." />
+      <Actor FullName="Shermy Iskow" MainCharacter="Plays main character in 'Uncle Vanya'." />
+      <Actor FullName="Jemimah Biggadyke" MainCharacter="Plays main character in 'Uncle Vanya'." />
+    </Actors>
+  </Play>
+  <Play Title="What the Butler Saw" Duration="02:00:25" Rating="5.2" Genre="Comedy">
+    <Actors>
+      <Actor FullName="Peggie Bowring" MainCharacter="Plays main character in 'What the Butler Saw'." />
+      <Actor FullName="Kitti Leisman" MainCharacter="Plays main character in 'What the Butler Saw'." />
+      <Actor FullName="Henka Padberry" MainCharacter="Plays main character in 'What the Butler Saw'." />
+      <Actor FullName="Galvin Iggulden" MainCharacter="Plays main character in 'What the Butler Saw'." />
+      <Actor FullName="Celene Whelpdale" MainCharacter="Plays main character in 'What the Butler Saw'." />
+      <Actor FullName="Ag Ewbanche" MainCharacter="Plays main character in 'What the Butler Saw'." />
+    </Actors>
+  </Play>
+  <Play Title="Woyzeck" Duration="01:00:30" Rating="3.4" Genre="Drama">
+    <Actors>
+      <Actor FullName="Vittorio Baise" MainCharacter="Plays main character in 'Woyzeck'." />
+    </Actors>
+  </Play>
+</Plays>
