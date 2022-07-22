@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Mime;
 using System.Text;
 using Microsoft.VisualBasic;
+using Newtonsoft.Json;
 using TeisterMask.Data.Models;
 using TeisterMask.Data.Models.Enums;
 using TeisterMask.DataProcessor.ImportDto;
@@ -97,7 +98,85 @@ namespace TeisterMask.DataProcessor
 
         public static string ImportEmployees(TeisterMaskContext context, string jsonString)
         {
-            throw new NotImplementedException();
+            //var jsonEmployees = JsonConvert.DeserializeObject<List<ImportEmployeesDto>>(jsonString);
+            //var sb = new StringBuilder();
+            //foreach (var jsonEmp in jsonEmployees)
+            //{
+            //    if (!IsValid(jsonEmp))
+            //    {
+            //        sb.AppendLine(ErrorMessage);
+            //        continue;
+            //    }
+
+            //    Employee employee = new Employee()
+            //    {
+            //        Username = jsonEmp.Username,
+            //        Email = jsonEmp.Email,
+            //        Phone = jsonEmp.Phone,
+            //    };
+
+            //    foreach (var jsonEmpTask in jsonEmp.Tasks.Distinct())
+            //    {
+            //        if (context.Tasks.Any(x => x.Id == jsonEmpTask))
+            //        {
+            //            employee.EmployeesTasks.Add(new EmployeeTask() { TaskId = jsonEmpTask });
+            //        }
+            //        else
+            //        {
+            //            sb.Append(ErrorMessage);
+            //        }
+            //    }
+            //    context.Employees.Add(employee);
+            //    context.SaveChanges();
+            //    sb.AppendLine(string.Format(SuccessfullyImportedEmployee, employee.Username,
+            //        employee.EmployeesTasks.Count));
+            //}
+
+            //return sb.ToString().TrimEnd();
+
+            var jsonImport = JsonConvert.DeserializeObject<List<ImportEmployeesDto>>(jsonString);
+            var sb = new StringBuilder();
+
+            foreach (var employeeDto in jsonImport)
+            {
+                if (!IsValid(employeeDto))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                var employee = new Employee()
+                {
+                    Username = employeeDto.Username,
+                    Email = employeeDto.Email,
+                    Phone = employeeDto.Phone
+                };
+
+                foreach (var employeeTask in employeeDto.Tasks.Distinct())
+                {
+                    if (context.Tasks.FirstOrDefault(x => x.Id == employeeTask) != null)
+                    {
+                        employee.EmployeesTasks.Add(new EmployeeTask()
+                        {
+                            TaskId = employeeTask
+                        });
+                    }
+                    else
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                }
+
+                context.Employees.Add(employee);
+                context.SaveChanges();
+
+                sb.AppendLine(string.Format(SuccessfullyImportedEmployee, employee.Username,
+                    employee.EmployeesTasks.Count));
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         private static bool IsValid(object dto)
