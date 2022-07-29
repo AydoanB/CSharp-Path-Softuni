@@ -39,11 +39,11 @@ public class HttpServer : IHttpServer
             /// <summary>Kepps connection with the tcpClient</summary>
             TcpClient client = await listener.AcceptTcpClientAsync();
 
-            ProcessClientAsynct(client);
+            ProcessClientAsync(client);
         }
     }
 
-    private async Task ProcessClientAsynct(TcpClient tcpClient)
+    private async Task ProcessClientAsync(TcpClient tcpClient)
     {
         using NetworkStream stream = tcpClient.GetStream();
 
@@ -51,7 +51,7 @@ public class HttpServer : IHttpServer
 
         List<byte> data = new List<byte>();
         int position = 0;
-       
+
         while (true)
         {
             int count = await stream.ReadAsync(buffer, position, buffer.Length);
@@ -77,6 +77,22 @@ public class HttpServer : IHttpServer
 
         Console.WriteLine(parsedRequest);
 
-        //await stream.WriteAsync();
+        var responseHtml = @"<h1>Welcome</h1>
+                            <p>To my site</p>";
+        var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
+
+        var responseHttp = "HTTP/1.1 200 OK" + HttpConstants.NewLine +
+                           "Server: SUS Server 1.0" + HttpConstants.NewLine +
+                           $"Content-Type: text/html" + HttpConstants.NewLine +
+                           $"Content-Length: {responseBodyBytes.Length}" + HttpConstants.NewLine +
+                           HttpConstants.NewLine;
+
+        var responseHeaderBytes = Encoding.UTF8.GetBytes(responseHttp);
+
+        await stream.WriteAsync(responseHeaderBytes);
+        await stream.WriteAsync(responseBodyBytes);
+
+        tcpClient.Close();
     }
+
 }
