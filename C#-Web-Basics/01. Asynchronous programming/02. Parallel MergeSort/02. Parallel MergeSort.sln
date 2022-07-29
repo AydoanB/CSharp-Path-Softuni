@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Parallel MergeSort", "02. Parallel MergeSort\02. Parallel MergeSort.csproj", "{04CEDA1B-5006-481A-BDD8-628745C176CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04CEDA1B-5006-481A-BDD8-628745C176CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CEDA1B-5006-481A-BDD8-628745C176CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CEDA1B-5006-481A-BDD8-628745C176CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CEDA1B-5006-481A-BDD8-628745C176CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {747CBC12-A8BC-457C-A0F3-AE34B2D0E772}
+	EndGlobalSection
+EndGlobal
