@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -45,54 +46,60 @@ public class HttpServer : IHttpServer
 
     private async Task ProcessClientAsync(TcpClient tcpClient)
     {
-        using NetworkStream stream = tcpClient.GetStream();
-
-        byte[] buffer = new byte[4096];
-
-        List<byte> data = new List<byte>();
-        int position = 0;
-
-        while (true)
+        try
         {
-            int count = await stream.ReadAsync(buffer, position, buffer.Length);
-            position += count;
-            if (count < buffer.Length)
+            using NetworkStream stream = tcpClient.GetStream();
+
+            byte[] buffer = new byte[4096];
+
+            List<byte> data = new List<byte>();
+            int position = 0;
+
+            while (true)
             {
-                var partialBuffer = new byte[count];
+                int count = await stream.ReadAsync(buffer, position, buffer.Length);
+                position += count;
+                if (count < buffer.Length)
+                {
+                    var partialBuffer = new byte[count];
 
-                Array.Copy(buffer, partialBuffer, count);
+                    Array.Copy(buffer, partialBuffer, count);
 
-                data.AddRange(partialBuffer);
+                    data.AddRange(partialBuffer);
 
-                ///<summary>There we break because there are no data in the buffer anymore
-                /// buffer is not full</summary>
-                break;
+                    ///<summary>There we break because there are no data in the buffer anymore
+                    /// buffer is not full</summary>
+                    break;
+                }
+                else
+                {
+                    data.AddRange(buffer);
+                }
             }
-            else
-            {
-                data.AddRange(buffer);
-            }
-        }
-        var parsedRequest = Encoding.UTF8.GetString(data.ToArray());
+            var parsedRequest = Encoding.UTF8.GetString(data.ToArray());
 
-        Console.WriteLine(parsedRequest);
+            var request = new HttpRequest(parsedRequest);
+            Console.WriteLine(parsedRequest);
 
-        var responseHtml = @"<h1>Welcome</h1>
+
+            var responseHtml = $@"<h1>Welcome</h1>
                             <p>To my site</p>";
-        var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
+            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
 
-        var responseHttp = "HTTP/1.1 200 OK" + HttpConstants.NewLine +
-                           "Server: SUS Server 1.0" + HttpConstants.NewLine +
-                           $"Content-Type: text/html" + HttpConstants.NewLine +
-                           $"Content-Length: {responseBodyBytes.Length}" + HttpConstants.NewLine +
-                           HttpConstants.NewLine;
 
-        var responseHeaderBytes = Encoding.UTF8.GetBytes(responseHttp);
+            var response = new HttpResponse("text/html", responseBodyBytes);
+            response.Cookies.Add(new ResponseCookie("name", "ime"));
+            var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());
+            await stream.WriteAsync(responseHeaderBytes);
+            await stream.WriteAsync(response.Body);
 
-        await stream.WriteAsync(responseHeaderBytes);
-        await stream.WriteAsync(responseBodyBytes);
-
-        tcpClient.Close();
+            tcpClient.Close();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
     }
+
 
 }

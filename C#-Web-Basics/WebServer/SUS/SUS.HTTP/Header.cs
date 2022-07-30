@@ -4,10 +4,14 @@ namespace SUS.HTTP;
 
 public class Header
 {
-    private string[] SplittedHeaderName;
+    public Header(string name,string value)
+    {
+        this.Name=name;
+        this.Value=value;
+    }
     public Header(string headerLine)
     {
-        SplittedHeaderName = headerLine.Split(": ",2,StringSplitOptions.None);
+        string[] SplittedHeaderName = headerLine.Split(": ",2,StringSplitOptions.None);
 
         this.Name = SplittedHeaderName[0];
         this.Value = SplittedHeaderName[1];
@@ -15,4 +19,9 @@ public class Header
 
     public string Name { get; set; }
     public string Value { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Name}: {Value}";
+    }
 }

@@ -9,15 +9,13 @@ namespace MyFirstMvcApps
         static async Task Main(string[] args)
         {
             var server = new HttpServer(); 
-
-            
            await server.StartAsync(80);
 
         }
 
-        static HttpResponse HomePage(HttpRequest request)
-        {
-            return new HttpResponse();
-        }
+        //static HttpResponse HomePage(HttpRequest request)
+        //{
+        //    return new HttpResponse();
+        //}
     }
 }

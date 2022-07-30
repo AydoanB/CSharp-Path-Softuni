@@ -4,16 +4,24 @@ namespace SUS.HTTP;
 
 public class Cookie
 {
-    private string[] SplittedHeaderName;
-    public Cookie(string headerLine)
+    public Cookie(string name,string value)
     {
-        SplittedHeaderName = headerLine.Split(": ", 2, StringSplitOptions.None);
-
-        this.Name = SplittedHeaderName[0];
-        this.Value = SplittedHeaderName[1];
+        this.Name = name;
+        this.Value = value;
+    }
+    public Cookie(string cookieLine)
+    {
+        var cookieParts = cookieLine.Split('=', 2);
+        this.Name = cookieParts[0];
+        this.Value = cookieParts[1];
 
     }
 
     public string Name { get; set; }
     public string Value { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Name}={Value}";
+    }
 }
