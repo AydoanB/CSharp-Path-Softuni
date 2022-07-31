@@ -82,13 +82,23 @@ public class HttpServer : IHttpServer
             Console.WriteLine(parsedRequest);
 
 
-            var responseHtml = $@"<h1>Welcome</h1>
-                            <p>To my site</p>";
-            var responseBodyBytes = Encoding.UTF8.GetBytes(responseHtml);
+
+            ///<summary>Generate dynamic view</summary>
+            HttpResponse response;
+            if (routeTable.ContainsKey(request.Path))
+            {
+                var action = routeTable[request.Path];
+
+                 response = action(request);
+            }
+            else
+            {
+                response = new HttpResponse("text/html", new byte[0], HttpStatusCode.NotFound);
+            }
 
 
-            var response = new HttpResponse("text/html", responseBodyBytes);
-            response.Cookies.Add(new ResponseCookie("name", "ime"));
+            response.Cookies.Add(new ResponseCookie("sid",Guid.NewGuid().ToString()));
+            response.Cookies.Add(new ResponseCookie("Server","SUS Server 1.0"));
             var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());
             await stream.WriteAsync(responseHeaderBytes);
             await stream.WriteAsync(response.Body);
