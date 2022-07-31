@@ -63,12 +63,7 @@ namespace SUS.HTTP
 
         }
 
-        public byte[] RequestEncoder(string text)
-        {
-            var responseToByte = Encoding.UTF8.GetBytes(text);
-
-            return responseToByte;
-        }
+        
 
         public string Path { get; set; }
 

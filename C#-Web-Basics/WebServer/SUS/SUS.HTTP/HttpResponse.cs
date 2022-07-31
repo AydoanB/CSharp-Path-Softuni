@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUS.HTTP.Enum;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

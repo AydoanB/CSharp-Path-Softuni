@@ -1,4 +1,4 @@
-﻿namespace SUS.HTTP;
+﻿namespace SUS.HTTP.Enum;
 
 public enum HttpStatusCode
 {
@@ -7,6 +7,6 @@ public enum HttpStatusCode
     NotFound = 404,
     MovedPermanently = 301,
     ServerError = 500,
-    Found=302
+    Found = 302
 
 }

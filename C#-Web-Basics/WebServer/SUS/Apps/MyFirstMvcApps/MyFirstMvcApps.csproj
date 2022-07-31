@@ -7,6 +7,25 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SUS.HTTP\SUS.HTTP.csproj" />
+    <ProjectReference Include="..\..\SUS.MvcFramework\SUS.MvcFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\Shared\_Layout.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Home\AboutUs.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Home\Index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Users\Login.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

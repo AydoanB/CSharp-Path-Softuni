@@ -4,4 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SUS.HTTP\SUS.HTTP.csproj" />
+  </ItemGroup>
+
 </Project>
