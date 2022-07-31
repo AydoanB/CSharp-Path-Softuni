@@ -80,7 +80,7 @@ public class HttpServer : IHttpServer
 
             ///<summary>Generate dynamic view</summary>
             HttpResponse response;
-            var route = this.routeTable.FirstOrDefault(x => x.Path == request.Path);
+            var route = this.routeTable.FirstOrDefault(x=>string.Compare(x.Path,request.Path,true)==0&& x.HttpMethod==request.Method);
             if (route!=null)
             {
                 response = route.Action(request);
