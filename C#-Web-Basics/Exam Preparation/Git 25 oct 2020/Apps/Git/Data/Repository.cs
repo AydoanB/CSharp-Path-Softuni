@@ -9,6 +9,7 @@ namespace Git.Data
         public Repository()
         {
             this.Commits = new HashSet<Commit>();
+            this.Id = Guid.NewGuid().ToString();
         }
         [Key]
         public string Id { get; set; }

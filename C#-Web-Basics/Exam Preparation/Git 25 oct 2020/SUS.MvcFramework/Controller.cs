@@ -19,11 +19,11 @@ namespace SUS.MvcFramework
 
         protected HttpResponse View(
             object viewModel = null,
-            [CallerMemberName]string viewPath = null)
+            [CallerMemberName] string viewPath = null)
         {
             var viewContent = System.IO.File.ReadAllText(
-                "Views/" + 
-                this.GetType().Name.Replace("Controller", string.Empty) + 
+                "Views/" +
+                this.GetType().Name.Replace("Controller", string.Empty) +
                 "/" + viewPath + ".cshtml");
             viewContent = this.viewEngine.GetHtml(viewContent, viewModel, this.GetUserId());
 
@@ -41,7 +41,7 @@ namespace SUS.MvcFramework
             return response;
         }
 
-        protected HttpResponse Redirect(string url)
+        protected HttpResponse Redirect(string url = "/")
         {
             var response = new HttpResponse(HttpStatusCode.Found);
             response.Headers.Add(new Header("Location", url));

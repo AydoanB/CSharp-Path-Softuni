@@ -47,6 +47,8 @@ namespace Git.Controllers
 
             var hashedPass = PasswordConverter.HashComute.HashConvert(model.Password);
 
+
+
             var id = this.userService.CreateUser(model.Username, model.Email, hashedPass);
 
             this.SignIn(id);

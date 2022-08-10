@@ -21,7 +21,7 @@ namespace Git.Services
         {
             var user = new User()
             {
-                Id = new Guid().ToString(),
+                Id = Guid.NewGuid().ToString(),
                 Username = username,
                 Password = password,
                 Email = email,

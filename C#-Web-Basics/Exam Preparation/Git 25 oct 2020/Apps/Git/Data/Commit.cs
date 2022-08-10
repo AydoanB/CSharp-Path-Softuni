@@ -5,13 +5,18 @@ namespace Git.Data
 {
     public class Commit
     {
-        [Key] 
+        public Commit()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
+        [Key]
         public string Id { get; set; }
 
-        [Required] 
+        [Required]
         public string Description { get; set; }
 
-        [Required] 
+        [Required]
         public DateTime CreatedOn { get; set; }
 
         public string CreatorId { get; set; }

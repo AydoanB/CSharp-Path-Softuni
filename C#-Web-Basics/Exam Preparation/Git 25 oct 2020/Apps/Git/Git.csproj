@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="BindingModels\Repositories\" />
     <Folder Include="BindingModels\Users\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>

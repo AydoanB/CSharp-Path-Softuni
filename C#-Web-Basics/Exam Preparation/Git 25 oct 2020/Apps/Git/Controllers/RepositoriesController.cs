@@ -1,21 +1,31 @@
-﻿using SUS.HTTP;
+﻿using System.Linq;
+using Git.BindingModels.Repositories;
+using Git.Data;
+using Git.Services;
+using Git.ViewModels;
+using SUS.HTTP;
 using SUS.MvcFramework;
 
 namespace Git.Controllers
 {
     public class RepositoriesController : Controller
     {
-        [HttpGet("/Repositories/All")]
-        public HttpResponse All()
+        private readonly RepositoryService RepositoryService;
+        private readonly ApplicationDbContext context;
+
+        public RepositoriesController(RepositoryService repositoryService, ApplicationDbContext db)
         {
-            //if (!IsUserSignedIn())
-            //{
-            //    return this.Redirect("/Users/Login");
-            //}
-            return this.View();
+            this.RepositoryService = repositoryService;
+            this.context = db;
         }
 
-        
+        public HttpResponse All()
+        {
+             var viewModel = this.RepositoryService.GetAll().ToList();
+           
+            return this.View(viewModel);
+        }
+
         public HttpResponse Create()
         {
             if (!IsUserSignedIn())
@@ -25,10 +35,16 @@ namespace Git.Controllers
             return this.View();
         }
 
-        [HttpPost("/Repositories/Create")]
-        public HttpResponse CreateRepo()
+        [HttpPost]
+        public HttpResponse Create(RepositoriesBindingModel input)
         {
-            return this.View();
+            var userId = this.GetUserId();
+
+            bool isPublic = input.repositoryType == "Public";
+
+            this.RepositoryService.CreateRepository(input.Name, isPublic, userId);
+
+            return this.Redirect("/Repositories/All");
         }
     }
 }
